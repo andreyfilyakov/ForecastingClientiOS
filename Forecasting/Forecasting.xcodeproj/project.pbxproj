@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		935869611BFBA57900B7E5B8 /* FCRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 935869601BFBA57900B7E5B8 /* FCRequestModel.m */; };
+		93D8D43D1BFE73DA009B7369 /* FCResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D8D43C1BFE73DA009B7369 /* FCResponseModel.m */; };
 		93E611A01BFA7029004CF440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E6119F1BFA7029004CF440 /* main.m */; };
 		93E611A31BFA7029004CF440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E611A21BFA7029004CF440 /* AppDelegate.m */; };
 		93E611A91BFA7029004CF440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E611A71BFA7029004CF440 /* Main.storyboard */; };
@@ -25,6 +26,8 @@
 		162C016069AD2F9AADB0C37B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9358695F1BFBA57900B7E5B8 /* FCRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCRequestModel.h; path = Models/FCRequestModel.h; sourceTree = "<group>"; };
 		935869601BFBA57900B7E5B8 /* FCRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRequestModel.m; path = Models/FCRequestModel.m; sourceTree = "<group>"; };
+		93D8D43B1BFE73D9009B7369 /* FCResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCResponseModel.h; path = Models/FCResponseModel.h; sourceTree = "<group>"; };
+		93D8D43C1BFE73DA009B7369 /* FCResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCResponseModel.m; path = Models/FCResponseModel.m; sourceTree = "<group>"; };
 		93E6119B1BFA7029004CF440 /* Forecasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E6119F1BFA7029004CF440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93E611A11BFA7029004CF440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 			children = (
 				9358695F1BFBA57900B7E5B8 /* FCRequestModel.h */,
 				935869601BFBA57900B7E5B8 /* FCRequestModel.m */,
+				93D8D43B1BFE73D9009B7369 /* FCResponseModel.h */,
+				93D8D43C1BFE73DA009B7369 /* FCResponseModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				93E611C61BFA7ADE004CF440 /* FCServerDataProvider.m in Sources */,
 				93E611C31BFA7ABF004CF440 /* FCBaseChart.m in Sources */,
 				935869611BFBA57900B7E5B8 /* FCRequestModel.m in Sources */,
+				93D8D43D1BFE73DA009B7369 /* FCResponseModel.m in Sources */,
 				93E611CB1BFA7E92004CF440 /* FCEnterParametersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

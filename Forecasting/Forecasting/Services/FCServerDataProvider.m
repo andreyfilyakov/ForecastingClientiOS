@@ -9,7 +9,7 @@
 #import "FCServerDataProvider.h"
 #import <AFNetworking/AFNetworking.h>
 
-#define kFCServerURL @"http://5.166.196.18:8080/Forecasting/api/parameters"
+#define kFCServerURL @"http://95.79.7.149:8081/Forecasting/api/parameters"
 
 @implementation FCServerDataProvider
 
@@ -29,16 +29,16 @@ static dispatch_once_t onceToken;
 }
 
 - (void)getDataWithRequest:(FCRequestModel *)request
-                completion:(void(^)(NSDictionary *response))completionBlock {
+                completion:(void(^)(FCResponseModel *response))completionBlock {
     NSDictionary *parameters = @{
                                  @"val1":[NSString stringWithFormat:@"%f", request.val1.doubleValue],
                                  @"val2":[NSString stringWithFormat:@"%f", request.val2.doubleValue],
                                  @"val3":[NSString stringWithFormat:@"%f", request.val3.doubleValue],
-                                 @"tm":[NSString stringWithFormat:@"%f", request.tm.doubleValue]
+                                 @"Tm":[NSString stringWithFormat:@"%f", request.tm.doubleValue]
                                  };
     [self makeRequestWithParameters:parameters completion:^(NSDictionary *data) {
-        // TODO: parse response
-        completionBlock(data);
+        FCResponseModel *response = [FCResponseModel responseWithJSON:data];
+        completionBlock(response);
     }];
 }
 
@@ -48,7 +48,10 @@ static dispatch_once_t onceToken;
                                       parameters:parameters
                                          success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
                                              completionBlock(responseObject);
-                                         } failure:nil];
+                                         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+                                             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"HTTP request is failed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                             [alert show];
+                                         }];
 }
 
 @end

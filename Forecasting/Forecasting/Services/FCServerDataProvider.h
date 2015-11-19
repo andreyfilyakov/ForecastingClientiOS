@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "FCRequestModel.h"
+#import "FCResponseModel.h"
 
 @interface FCServerDataProvider : NSObject
 
 + (instancetype)sharedInstance;
 
 - (void)getDataWithRequest:(FCRequestModel *)request
-                completion:(void(^)(NSDictionary *response))completionBlock;
+                completion:(void(^)(FCResponseModel *response))completionBlock;
 
 @end

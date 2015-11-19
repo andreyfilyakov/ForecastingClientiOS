@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FCResponseModel.h"
 
 @interface FCChartsViewController : UIViewController
+
+@property (nonatomic, strong) FCResponseModel *response;
 
 + (NSString *)storyboardId;
 

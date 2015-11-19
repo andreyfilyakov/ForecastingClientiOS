@@ -27,10 +27,10 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Enter parameters of algorythm:";
-    self.val1TextField.text = @"0";
-    self.val2TextField.text = @"0";
-    self.val3TextField.text = @"0";
-    self.tmTextField.text = @"0";
+    self.val1TextField.text = @"0.2";
+    self.val2TextField.text = @"0.9";
+    self.val3TextField.text = @"90";
+    self.tmTextField.text = @"500";
 }
 
 - (IBAction)calculate:(id)sender {
@@ -41,9 +41,10 @@
                                                          val3:@(self.val3TextField.text.integerValue)
                                                            tm:@(self.tmTextField.text.integerValue)];
     [[FCServerDataProvider sharedInstance] getDataWithRequest:request
-                                                   completion:^(NSDictionary *response) {
-                                                       
-                                                           [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:[FCChartsViewController storyboardId]] animated:YES];
+                                                   completion:^(FCResponseModel *response) {
+                                                       FCChartsViewController *chartsViewController = [self.storyboard instantiateViewControllerWithIdentifier:[FCChartsViewController storyboardId]];
+                                                       chartsViewController.response = response;
+                                                       [self.navigationController pushViewController:chartsViewController animated:YES];
                                                        [self.calculateButton setUserInteractionEnabled:YES];
                                                        [self.loadingIndicator stopAnimating];
                                                    }];
