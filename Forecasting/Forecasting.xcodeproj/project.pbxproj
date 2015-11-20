@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		935869611BFBA57900B7E5B8 /* FCRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 935869601BFBA57900B7E5B8 /* FCRequestModel.m */; };
 		93D8D43D1BFE73DA009B7369 /* FCResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D8D43C1BFE73DA009B7369 /* FCResponseModel.m */; };
+		93D8D4411BFFCCBE009B7369 /* FCChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D8D4401BFFCCBD009B7369 /* FCChartCollectionViewCell.m */; };
+		93D8D4431BFFD767009B7369 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8D4421BFFD767009B7369 /* Security.framework */; };
+		93D8D4451BFFD76F009B7369 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8D4441BFFD76F009B7369 /* QuartzCore.framework */; };
+		93D8D4471BFFD77E009B7369 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8D4461BFFD77E009B7369 /* OpenGLES.framework */; };
+		93D8D4491BFFD787009B7369 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8D4481BFFD787009B7369 /* CoreText.framework */; };
+		93D8D44B1C005D33009B7369 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8D44A1C005D33009B7369 /* libc++.1.tbd */; };
+		93D8D44D1C005D3B009B7369 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8D44C1C005D3B009B7369 /* libc++.tbd */; };
+		93D8D44F1C005D47009B7369 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8D44E1C005D47009B7369 /* libc++abi.tbd */; };
+		93D8D4501C005D68009B7369 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E611C71BFA7B91004CF440 /* ShinobiCharts.framework */; };
 		93E611A01BFA7029004CF440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E6119F1BFA7029004CF440 /* main.m */; };
 		93E611A31BFA7029004CF440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E611A21BFA7029004CF440 /* AppDelegate.m */; };
 		93E611A91BFA7029004CF440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E611A71BFA7029004CF440 /* Main.storyboard */; };
@@ -28,6 +37,15 @@
 		935869601BFBA57900B7E5B8 /* FCRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRequestModel.m; path = Models/FCRequestModel.m; sourceTree = "<group>"; };
 		93D8D43B1BFE73D9009B7369 /* FCResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCResponseModel.h; path = Models/FCResponseModel.h; sourceTree = "<group>"; };
 		93D8D43C1BFE73DA009B7369 /* FCResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCResponseModel.m; path = Models/FCResponseModel.m; sourceTree = "<group>"; };
+		93D8D43F1BFFCCBD009B7369 /* FCChartCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCChartCollectionViewCell.h; path = Views/FCChartCollectionViewCell.h; sourceTree = "<group>"; };
+		93D8D4401BFFCCBD009B7369 /* FCChartCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCChartCollectionViewCell.m; path = Views/FCChartCollectionViewCell.m; sourceTree = "<group>"; };
+		93D8D4421BFFD767009B7369 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		93D8D4441BFFD76F009B7369 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		93D8D4461BFFD77E009B7369 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		93D8D4481BFFD787009B7369 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		93D8D44A1C005D33009B7369 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		93D8D44C1C005D3B009B7369 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		93D8D44E1C005D47009B7369 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		93E6119B1BFA7029004CF440 /* Forecasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E6119F1BFA7029004CF440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93E611A11BFA7029004CF440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +73,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D8D4501C005D68009B7369 /* ShinobiCharts.framework in Frameworks */,
+				93D8D44F1C005D47009B7369 /* libc++abi.tbd in Frameworks */,
+				93D8D44D1C005D3B009B7369 /* libc++.tbd in Frameworks */,
+				93D8D44B1C005D33009B7369 /* libc++.1.tbd in Frameworks */,
+				93D8D4491BFFD787009B7369 /* CoreText.framework in Frameworks */,
+				93D8D4471BFFD77E009B7369 /* OpenGLES.framework in Frameworks */,
+				93D8D4451BFFD76F009B7369 /* QuartzCore.framework in Frameworks */,
+				93D8D4431BFFD767009B7369 /* Security.framework in Frameworks */,
 				ECA11A283315ABDFB94E4009 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,10 +91,26 @@
 		2F36E76A49ACAD62F7BA9FAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93D8D44E1C005D47009B7369 /* libc++abi.tbd */,
+				93D8D44C1C005D3B009B7369 /* libc++.tbd */,
+				93D8D44A1C005D33009B7369 /* libc++.1.tbd */,
+				93D8D4481BFFD787009B7369 /* CoreText.framework */,
+				93D8D4461BFFD77E009B7369 /* OpenGLES.framework */,
+				93D8D4441BFFD76F009B7369 /* QuartzCore.framework */,
+				93D8D4421BFFD767009B7369 /* Security.framework */,
 				93E611C71BFA7B91004CF440 /* ShinobiCharts.framework */,
 				D8C0C4C22251878A1A0D78CB /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93D8D43E1BFFCC87009B7369 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93D8D43F1BFFCCBD009B7369 /* FCChartCollectionViewCell.h */,
+				93D8D4401BFFCCBD009B7369 /* FCChartCollectionViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		93E611921BFA7028004CF440 = {
@@ -92,6 +134,7 @@
 		93E6119D1BFA7029004CF440 /* Forecasting */ = {
 			isa = PBXGroup;
 			children = (
+				93D8D43E1BFFCC87009B7369 /* Views */,
 				93E611BB1BFA773F004CF440 /* Models */,
 				93E611BA1BFA772A004CF440 /* Charts */,
 				93E611B91BFA7719004CF440 /* Services */,
@@ -286,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D8D4411BFFCCBE009B7369 /* FCChartCollectionViewCell.m in Sources */,
 				93E611C01BFA7A8E004CF440 /* FCChartsViewController.m in Sources */,
 				93E611AC1BFA7029004CF440 /* Forecasting.xcdatamodeld in Sources */,
 				93E611A31BFA7029004CF440 /* AppDelegate.m in Sources */,

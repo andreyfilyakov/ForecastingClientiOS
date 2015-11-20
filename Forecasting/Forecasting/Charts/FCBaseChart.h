@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ShinobiCharts/ShinobiCharts.h>
 
-@interface FCBaseChart : NSObject
+@interface FCBaseChart : NSObject <SChartDatasource>
+
+@property (nonatomic, strong) NSString *title;
+
+- (instancetype)initWithData:(NSArray *)data title:(NSString *)title;
+- (void)addToView:(UIView *)view;
+- (void)removeFromSuperview;
+- (void)updateChart;
 
 @end
