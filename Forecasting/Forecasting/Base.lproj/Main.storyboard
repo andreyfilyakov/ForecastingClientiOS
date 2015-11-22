@@ -285,7 +285,7 @@
                                 <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                                 <animations/>
                                 <segments>
-                                    <segment title="W"/>
+                                    <segment title="Winner"/>
                                     <segment title="LMS"/>
                                     <segment title="Errors"/>
                                 </segments>

@@ -29,7 +29,7 @@
     self.navigationItem.title = @"Enter parameters of algorythm:";
     self.val1TextField.text = @"0.2";
     self.val2TextField.text = @"0.9";
-    self.val3TextField.text = @"90";
+    self.val3TextField.text = @"0.5";
     self.tmTextField.text = @"500";
 }
 

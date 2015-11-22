@@ -50,76 +50,76 @@
     
     self.sw0Chart = [[FCBaseChart alloc] initWithData:@[
                                                         self.response.x,
-                                                        self.response.s0,
-                                                        self.response.y0
+                                                        self.response.y0,
+                                                        self.response.s0
                                                         ]
                                                 title:@"W0"];
     self.sw1Chart = [[FCBaseChart alloc] initWithData:@[
                                                         self.response.x,
-                                                        self.response.s1,
-                                                        self.response.y1
+                                                        self.response.y1,
+                                                        self.response.s1
                                                         ]
                                                 title:@"W1"];
     self.sw2Chart = [[FCBaseChart alloc] initWithData:@[
                                                         self.response.x,
-                                                        self.response.s2,
-                                                        self.response.y2
+                                                        self.response.y2,
+                                                        self.response.s2
                                                         ]
                                                 title:@"W2"];
     self.sw3Chart = [[FCBaseChart alloc] initWithData:@[
                                                         self.response.x,
-                                                        self.response.s3,
-                                                        self.response.y3
+                                                        self.response.y3,
+                                                        self.response.s3
                                                         ]
                                                 title:@"W3"];
     
     self.slms0Chart = [[FCBaseChart alloc] initWithData:@[
                                                           self.response.x,
-                                                          self.response.s0,
-                                                          self.response.lms0
+                                                          self.response.lms0,
+                                                          self.response.s0
                                                           ]
                                                   title:@"LMS0"];
     self.slms1Chart = [[FCBaseChart alloc] initWithData:@[
                                                           self.response.x,
-                                                          self.response.s1,
-                                                          self.response.lms1
+                                                          self.response.lms1,
+                                                          self.response.s1
                                                           ]
                                                   title:@"LMS1"];
     self.slms2Chart = [[FCBaseChart alloc] initWithData:@[
                                                           self.response.x,
-                                                          self.response.s2,
-                                                          self.response.lms2
+                                                          self.response.lms2,
+                                                          self.response.s2
                                                           ]
                                                   title:@"LMS2"];
     self.slms3Chart = [[FCBaseChart alloc] initWithData:@[
                                                           self.response.x,
-                                                          self.response.s3,
-                                                          self.response.lms3
+                                                          self.response.lms3,
+                                                          self.response.s3
                                                           ]
                                                   title:@"LMS3"];
     
     self.s0ErrorChart = [[FCBaseChart alloc] initWithData:@[
                                                             self.response.x,
-                                                            self.response.w0Error,
-                                                            self.response.lms0Error
+                                                            self.response.lms0Error,
+                                                            self.response.w0Error
                                                             ]
                                                     title:@"S0 Error"];
     self.s1ErrorChart = [[FCBaseChart alloc] initWithData:@[
                                                             self.response.x,
-                                                            self.response.w1Error,
-                                                            self.response.lms1Error
+                                                            self.response.lms1Error,
+                                                            self.response.w1Error
                                                             ]
                                                     title:@"S1 Error"];
     self.s2ErrorChart = [[FCBaseChart alloc] initWithData:@[
                                                             self.response.x,
-                                                            self.response.w2Error,
-                                                            self.response.lms2Error
+                                                            self.response.lms2Error,
+                                                            self.response.w2Error
                                                             ]
                                                     title:@"S2 Error"];
     self.s3ErrorChart = [[FCBaseChart alloc] initWithData:@[
                                                             self.response.x,
-                                                            self.response.w3Error,
-                                                            self.response.lms3Error
+                                                            self.response.lms3Error,
+                                                            self.response.w3Error
                                                             ]
                                                     title:@"S3 Error"];
     
