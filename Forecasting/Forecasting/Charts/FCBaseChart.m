@@ -43,6 +43,7 @@
 
 - (void)updateChart {
     self.chart.xAxis = [self chartXAxis];
+    self.chart.yAxis = [self chartYAxis];
 }
 
 - (SChartNumberAxis *)chartXAxis {
@@ -51,7 +52,8 @@
 }
 
 - (SChartNumberRange *)chartXRange {
-    SChartNumberRange *xRange = [[SChartNumberRange alloc] initWithMinimum:@(-1.1) andMaximum:@1.1];
+    NSArray *xArray = [self.data objectAtIndex:0];
+    SChartNumberRange *xRange = [[SChartNumberRange alloc] initWithMinimum:@([[xArray firstObject] doubleValue] * 1.1) andMaximum:@([[xArray lastObject] doubleValue] * 1.1)];
     return xRange;
 }
 
@@ -61,7 +63,7 @@
 }
 
 - (SChartNumberRange *)chartYRange {
-    SChartNumberRange *yRange = [[SChartNumberRange alloc] initWithMinimum:@(-1.5) andMaximum:@1.5];
+    SChartNumberRange *yRange = [[SChartNumberRange alloc] initWithMinimum:@(-5) andMaximum:@5];
     return yRange;
 }
 
@@ -71,25 +73,6 @@
 
 - (SChartSeries *)sChart:(ShinobiChart *)chart seriesAtIndex:(NSInteger)index {
     SChartLineSeries *series = [[SChartLineSeries alloc] init];
-    SChartLineSeriesStyle *style = [[SChartLineSeriesStyle alloc] init];
-    UIColor *lineColor;
-    switch (index) {
-        case 0:
-            lineColor = [UIColor redColor];
-            break;
-        case 1:
-            lineColor = [UIColor blueColor];
-            break;
-        case 2:
-            lineColor = [UIColor greenColor];
-            break;
-        case 3:
-            lineColor = [UIColor orangeColor];
-            break;
-    }
-    style.lineColor = lineColor;
-    style.areaLineColor = lineColor;
-    series.style = style;
     return series;
 }
 

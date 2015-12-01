@@ -21,6 +21,10 @@
 @property (nonatomic, strong) NSArray *s2;
 @property (nonatomic, strong) NSArray *s3;
 
+@property (nonatomic, strong) NSArray *winnerW;
+@property (nonatomic, strong) NSArray *lmsW;
+@property (nonatomic, strong) NSArray *wX;
+
 @property (nonatomic, strong) NSArray *w0Error;
 @property (nonatomic, strong) NSArray *w1Error;
 @property (nonatomic, strong) NSArray *w2Error;

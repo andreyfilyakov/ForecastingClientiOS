@@ -9,6 +9,8 @@
 #import "FCChartsViewController.h"
 #import "FCChartCollectionViewCell.h"
 #import "FCBaseChart.h"
+#import "FCMainChart.h"
+#import "FCWChart.h"
 
 #define kFCNumberOfSections 1
 #define kFCNumberOfItemsInSection 4
@@ -18,20 +20,30 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
-@property (nonatomic, strong) FCBaseChart *sw0Chart;
-@property (nonatomic, strong) FCBaseChart *sw1Chart;
-@property (nonatomic, strong) FCBaseChart *sw2Chart;
-@property (nonatomic, strong) FCBaseChart *sw3Chart;
+@property (nonatomic, strong) FCMainChart *sw0Chart;
+@property (nonatomic, strong) FCMainChart *sw1Chart;
+@property (nonatomic, strong) FCMainChart *sw2Chart;
+@property (nonatomic, strong) FCMainChart *sw3Chart;
 
-@property (nonatomic, strong) FCBaseChart *slms0Chart;
-@property (nonatomic, strong) FCBaseChart *slms1Chart;
-@property (nonatomic, strong) FCBaseChart *slms2Chart;
-@property (nonatomic, strong) FCBaseChart *slms3Chart;
+@property (nonatomic, strong) FCMainChart *slms0Chart;
+@property (nonatomic, strong) FCMainChart *slms1Chart;
+@property (nonatomic, strong) FCMainChart *slms2Chart;
+@property (nonatomic, strong) FCMainChart *slms3Chart;
 
 @property (nonatomic, strong) FCBaseChart *s0ErrorChart;
 @property (nonatomic, strong) FCBaseChart *s1ErrorChart;
 @property (nonatomic, strong) FCBaseChart *s2ErrorChart;
 @property (nonatomic, strong) FCBaseChart *s3ErrorChart;
+
+@property (nonatomic, strong) FCWChart *winnerW0Chart;
+@property (nonatomic, strong) FCWChart *winnerW1Chart;
+@property (nonatomic, strong) FCWChart *winnerW2Chart;
+@property (nonatomic, strong) FCWChart *winnerW3Chart;
+
+@property (nonatomic, strong) FCWChart *lmsW0Chart;
+@property (nonatomic, strong) FCWChart *lmsW1Chart;
+@property (nonatomic, strong) FCWChart *lmsW2Chart;
+@property (nonatomic, strong) FCWChart *lmsW3Chart;
 
 @property (nonatomic, assign) NSUInteger currentSegment;
 @property (nonatomic, strong) NSArray *currentCharts;
@@ -48,53 +60,53 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    self.sw0Chart = [[FCBaseChart alloc] initWithData:@[
+    self.sw0Chart = [[FCMainChart alloc] initWithData:@[
                                                         self.response.x,
-                                                        self.response.y0,
-                                                        self.response.s0
+                                                        self.response.s0,
+                                                        self.response.y0
                                                         ]
                                                 title:@"W0"];
-    self.sw1Chart = [[FCBaseChart alloc] initWithData:@[
+    self.sw1Chart = [[FCMainChart alloc] initWithData:@[
                                                         self.response.x,
-                                                        self.response.y1,
-                                                        self.response.s1
+                                                        self.response.s1,
+                                                        self.response.y1
                                                         ]
                                                 title:@"W1"];
-    self.sw2Chart = [[FCBaseChart alloc] initWithData:@[
+    self.sw2Chart = [[FCMainChart alloc] initWithData:@[
                                                         self.response.x,
-                                                        self.response.y2,
-                                                        self.response.s2
+                                                        self.response.s2,
+                                                        self.response.y2
                                                         ]
                                                 title:@"W2"];
-    self.sw3Chart = [[FCBaseChart alloc] initWithData:@[
+    self.sw3Chart = [[FCMainChart alloc] initWithData:@[
                                                         self.response.x,
-                                                        self.response.y3,
-                                                        self.response.s3
+                                                        self.response.s3,
+                                                        self.response.y3
                                                         ]
                                                 title:@"W3"];
     
-    self.slms0Chart = [[FCBaseChart alloc] initWithData:@[
+    self.slms0Chart = [[FCMainChart alloc] initWithData:@[
                                                           self.response.x,
-                                                          self.response.lms0,
-                                                          self.response.s0
+                                                          self.response.s0,
+                                                          self.response.lms0
                                                           ]
                                                   title:@"LMS0"];
-    self.slms1Chart = [[FCBaseChart alloc] initWithData:@[
+    self.slms1Chart = [[FCMainChart alloc] initWithData:@[
                                                           self.response.x,
-                                                          self.response.lms1,
-                                                          self.response.s1
+                                                          self.response.s1,
+                                                          self.response.lms1
                                                           ]
                                                   title:@"LMS1"];
-    self.slms2Chart = [[FCBaseChart alloc] initWithData:@[
+    self.slms2Chart = [[FCMainChart alloc] initWithData:@[
                                                           self.response.x,
-                                                          self.response.lms2,
-                                                          self.response.s2
+                                                          self.response.s2,
+                                                          self.response.lms2
                                                           ]
                                                   title:@"LMS2"];
-    self.slms3Chart = [[FCBaseChart alloc] initWithData:@[
+    self.slms3Chart = [[FCMainChart alloc] initWithData:@[
                                                           self.response.x,
-                                                          self.response.lms3,
-                                                          self.response.s3
+                                                          self.response.s3,
+                                                          self.response.lms3
                                                           ]
                                                   title:@"LMS3"];
     
@@ -122,6 +134,20 @@
                                                             self.response.w3Error
                                                             ]
                                                     title:@"S3 Error"];
+    
+    NSMutableArray *winnerW = [NSMutableArray arrayWithObject:self.response.wX];
+    [winnerW addObjectsFromArray:self.response.winnerW];
+    self.winnerW0Chart = [[FCWChart alloc] initWithData:winnerW title:@"W0"];
+    self.winnerW1Chart = [[FCWChart alloc] initWithData:winnerW title:@"W1"];
+    self.winnerW2Chart = [[FCWChart alloc] initWithData:winnerW title:@"W2"];
+    self.winnerW3Chart = [[FCWChart alloc] initWithData:winnerW title:@"W3"];
+    
+    NSMutableArray *lmsW = [NSMutableArray arrayWithObject:self.response.wX];
+    [lmsW addObjectsFromArray:self.response.lmsW];
+    self.lmsW0Chart = [[FCWChart alloc] initWithData:lmsW title:@"W0"];
+    self.lmsW1Chart = [[FCWChart alloc] initWithData:lmsW title:@"W1"];
+    self.lmsW2Chart = [[FCWChart alloc] initWithData:lmsW title:@"W2"];
+    self.lmsW3Chart = [[FCWChart alloc] initWithData:lmsW title:@"W3"];
     
     [self setCurrentSegment:0];
 }
@@ -155,6 +181,23 @@
                                    self.s3ErrorChart
                                    ];
             break;
+            
+        case 3:
+            self.currentCharts = @[
+                                   self.winnerW0Chart,
+                                   self.winnerW1Chart,
+                                   self.winnerW2Chart,
+                                   self.winnerW3Chart
+                                   ];
+            break;
+            
+        case 4:
+            self.currentCharts = @[
+                                   self.lmsW0Chart,
+                                   self.lmsW1Chart,
+                                   self.lmsW2Chart,
+                                   self.lmsW3Chart
+                                   ];
             
         default:
             break;

@@ -49,7 +49,7 @@ static dispatch_once_t onceToken;
                                          success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
                                              completionBlock(responseObject);
                                          } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-                                             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"HTTP request is failed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                                              [alert show];
                                          }];
 }

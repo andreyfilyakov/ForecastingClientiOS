@@ -38,6 +38,10 @@
         self.lms1Error = [json objectForKey:@"dLMS1"];
         self.lms2Error = [json objectForKey:@"dLMS2"];
         self.lms3Error = [json objectForKey:@"dLMS3"];
+        
+        self.wX = [json objectForKey:@"Wx"];
+        self.winnerW = [json objectForKey:@"WinnerW"];
+        self.lmsW = [json objectForKey:@"LMSW"];
     }
     return self;
 }

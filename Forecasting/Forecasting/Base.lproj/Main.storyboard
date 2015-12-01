@@ -288,6 +288,8 @@
                                     <segment title="Winner"/>
                                     <segment title="LMS"/>
                                     <segment title="Errors"/>
+                                    <segment title="Winner W"/>
+                                    <segment title="LMS W"/>
                                 </segments>
                                 <connections>
                                     <action selector="algorythmSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="cIc-Cw-i0x"/>
@@ -342,12 +344,12 @@
                                                 <exclude reference="8X0-a7-VSO"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <exclude reference="Qnx-v7-7bH"/>
+                                                <exclude reference="Wpg-oT-pDl"/>
                                                 <exclude reference="WlS-yB-UBE"/>
                                                 <exclude reference="l3E-d3-eYc"/>
                                                 <exclude reference="tlJ-vR-dQR"/>
                                                 <exclude reference="ySp-JN-N3O"/>
-                                                <exclude reference="Qnx-v7-7bH"/>
-                                                <exclude reference="Wpg-oT-pDl"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=regular">
@@ -356,12 +358,12 @@
                                                 <include reference="8X0-a7-VSO"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <include reference="Qnx-v7-7bH"/>
+                                                <include reference="Wpg-oT-pDl"/>
                                                 <include reference="WlS-yB-UBE"/>
                                                 <include reference="l3E-d3-eYc"/>
                                                 <include reference="tlJ-vR-dQR"/>
                                                 <include reference="ySp-JN-N3O"/>
-                                                <include reference="Qnx-v7-7bH"/>
-                                                <include reference="Wpg-oT-pDl"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -393,12 +395,12 @@
                                 <exclude reference="Xbf-di-IRf"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Cvj-Ep-Gu2"/>
                                 <exclude reference="1U5-IG-dOi"/>
                                 <exclude reference="2Ir-lw-z08"/>
                                 <exclude reference="hC6-lV-oZE"/>
                                 <exclude reference="nDG-Ct-VBE"/>
                                 <exclude reference="z8M-ys-ymE"/>
-                                <exclude reference="Cvj-Ep-Gu2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -407,12 +409,12 @@
                                 <include reference="Xbf-di-IRf"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Cvj-Ep-Gu2"/>
                                 <include reference="1U5-IG-dOi"/>
                                 <include reference="2Ir-lw-z08"/>
                                 <include reference="hC6-lV-oZE"/>
                                 <include reference="nDG-Ct-VBE"/>
                                 <include reference="z8M-ys-ymE"/>
-                                <include reference="Cvj-Ep-Gu2"/>
                             </mask>
                         </variation>
                     </view>
